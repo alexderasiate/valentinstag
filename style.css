@@ -71,7 +71,7 @@ button:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 600px;
+  width: 900px;
   display: none;
   z-index: 9999;
 }
