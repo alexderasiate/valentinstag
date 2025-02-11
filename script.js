@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   let datePicker = document.getElementById("datePicker");
+  let alertShown = false; // Verhindert wiederholte Pop-ups
 
   // Setze das minimale Datum auf den 21. Februar
   let minDate = new Date();
@@ -7,6 +8,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let minDateString = minDate.toISOString().split("T")[0];
   datePicker.setAttribute("min", minDateString);
+
+  // Hinweis nur einmal anzeigen, wenn das Datumseingabefeld geöffnet wird
+  datePicker.addEventListener("focus", function () {
+    if (!alertShown) {
+      alert(
+        "Bitte wähle ein Datum nach dem 20. Februar, da dein Bf für eure gemeinsame Zukunft arbeitet ❤️! 📅"
+      );
+      alertShown = true; // Setzt die Variable auf "true", damit die Meldung nicht erneut erscheint
+    }
+  });
 });
 
 let noBtn = document.getElementById("noBtn");
