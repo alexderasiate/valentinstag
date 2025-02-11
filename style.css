@@ -1,0 +1,77 @@
+body {
+  font-family: "Arial", sans-serif;
+  background: url("background.gif") no-repeat center center fixed;
+  background-size: cover;
+  text-align: center;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-top: 100px;
+  padding: 20px;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Transparenter Hintergrund für bessere Lesbarkeit */
+  border-radius: 15px;
+  display: inline-block;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+label {
+  font-size: 1.2em;
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="date"] {
+  font-size: 1.2em;
+  padding: 8px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Buttons nebeneinander */
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Abstand zwischen den Buttons */
+}
+
+button {
+  background-color: red;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: darkred;
+}
+
+/* Nein-Button bleibt anfangs an Ort und Stelle */
+#noBtn {
+  position: relative;
+}
+/* GIFs werden anfangs versteckt */
+.gif-hidden {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  display: none;
+  z-index: 9999;
+}
